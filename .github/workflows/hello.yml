@@ -1,0 +1,16 @@
+name: Hello Actions
+
+on:
+  workflow_dispatch:
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 打个招呼
+        run: echo "Hello from GitHub Actions!"
+      - name: 看看环境
+        run: |
+          echo "仓库: ${{ github.repository }}"
+          echo "触发者: ${{ github.actor }}"
+          date
